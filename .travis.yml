@@ -9,8 +9,8 @@ before_install:
   - source $HOME/google-cloud-sdk/path.bash.inc
   - gcloud components update kubectl
   - gcloud auth activate-service-account --key-file service-account.json
-  - gcloud config set project complex8s
-  - gcloud config set compute/zone us-central1-c
+  - gcloud config set project complexk8s-323006
+  - gcloud config set compute/zone australia-southeast1-a
   - gcloud container clusters get-credentials complexk8s
   - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_USERNAME" --password-stdin
   - docker build -t girishl/react-test -f ./client/Dockerfile.dev ./client
