@@ -1,3 +1,4 @@
+echo $SHA
 docker build -t girishl/multi-client:latest -t girishl/multi-client:$SHA -f ./client/Dockerfile ./client
 docker build -t girishl/multi-server:latest -t girishl/multi-server:$SHA -f ./server/Dockerfile ./server
 docker build -t girishl/multi-worker:latest -t girishl/multi-worker:$SHA -f ./worker/Dockerfile ./worker
